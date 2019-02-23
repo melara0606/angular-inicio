@@ -1,0 +1,16 @@
+*ngIf
+<hr />
+<div>
+  <button (click)="mostrar=!mostrar">
+    Click para mostrar/ocultar
+  </button>
+  <p *ngIf="mostrar">{{ texto }}</p>
+</div>
+*ngFor
+<hr />
+<div>
+  <ul>
+    <li *ngFor="let personaje of personajes">{{ personaje }}</li>
+  </ul>
+</div>
+
