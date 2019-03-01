@@ -61,6 +61,13 @@ export class HeroesService {
   getHeroe(idx: number) {
     return this.heroes[idx];
   }
+
+  buscarHeroe(termino: string) {
+    return this.heroes.filter( (el, index) => {
+      el.idx = index;
+      return el.nombre.toLowerCase().indexOf( termino ) >= 0;
+    });
+  }
 }
 
 export interface Heroes {
@@ -69,4 +76,5 @@ export interface Heroes {
   img: string;
   aparicion: string;
   casa: string;
+  idx?: number;
 }
