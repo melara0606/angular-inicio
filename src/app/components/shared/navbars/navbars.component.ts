@@ -6,8 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './navbars.component.html'
 })
 export class NavbarsComponent {
-
-  constructor(private router: Router) {  }
+  constructor(private router: Router) { }
 
   buscarHeroe(termino: string) {
     this.router.navigate( ['/buscar', termino.toLowerCase()] );
