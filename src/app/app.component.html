@@ -1,1 +1,96 @@
-<app-header></app-header>
+<div class="container">
+  <h1>Pipes</h1>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">variable</th>
+        <th scope="col">pipes</th>
+        <th scope="col">producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>uppercase</td>
+        <td>{{ nombre | uppercase }}</td>
+      </tr>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>lowercase</td>
+        <td>{{ nombre | lowercase }}</td>
+      </tr>
+      <tr>
+        <th>{{ arreglo }}</th>
+        <td>slice:1:5</td>
+        <td>{{ arreglo | slice:1:5 }}</td>
+      </tr>
+      <tr>
+        <th>{{ PI }}</th>
+        <td>number:'3.0-1'</td>
+        <td>{{ PI | number: '3.0-1' }}</td>
+      </tr>
+      <tr>
+        <th>{{ PI }}</th>
+        <td>number:'1.2-4'</td>
+        <td>{{ PI | number: '1.2-4' }}</td>
+      </tr>
+      <tr>
+        <th>{{ a }}</th>
+        <td>percent:'1.2-2'</td>
+        <td>{{ a | percent: '1.2-2' }}</td>
+      </tr>
+      <tr>
+        <th>{{ salario }}</th>
+        <td>currency</td>
+        <td>{{ salario | currency }}</td>
+      </tr>
+      <tr>
+        <th>{{ salario }}</th>
+        <td>currency:'EUR'</td>
+        <td>{{ salario | currency:'EUR' }}</td>
+      </tr>
+      <tr>
+        <th>{{ salario }}</th>
+        <td>currency:'EUR':false </td>
+        <td>{{ salario | currency:'EUR':false }}</td>
+      </tr>
+      <tr>
+        <th>{{ salario }}</th>
+        <td>currency:'EUR':true:'.2-2' </td>
+        <td>{{ salario | currency:'EUR':true:'.2-2' }}</td>
+      </tr>
+      <!-- <tr>
+        <th>{{ valorPromesa }}</th>
+        <td>async</td>
+        <td>{{ valorPromesa | async }}</td>
+      </tr> -->
+      <tr>
+        <th>{{ date }}</th>
+        <td>date</td>
+        <td>{{ date | date }}</td>
+      </tr>
+      <tr>
+        <th>{{ date }}</th>
+        <td>date:'medium'</td>
+        <td>{{ date | date:'medium' }}</td>
+      </tr>
+      <tr>
+        <th>{{ date }}</th>
+        <td>date:'MMMM - dd'</td>
+        <td>{{ date | date:'MMMM - dd' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Slice</h2>
+  <ul>
+    <li *ngFor="let item of arreglo | slice:1:5">{{ item }}</li>
+  </ul>
+  <h2>Json</h2>
+  <code>
+    <pre>{{ heroe | json }}</pre>
+  </code>
+</div>
+
+<br><br><br><br>
