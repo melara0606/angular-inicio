@@ -21,6 +21,9 @@ export class AppComponent {
   };
 
   date = new Date();
+  nombreCapitalizable = 'eDwIn meLarA lAndAvERde';
+  codigoYoutube = 'thATmzHx5AY';
+  activar = true;
 
   valorPromesa = new Promise( (resolve, reject) => {
     setTimeout(() => resolve('Llego la respuesta'), 3500);

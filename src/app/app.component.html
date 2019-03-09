@@ -60,11 +60,11 @@
         <td>currency:'EUR':true:'.2-2' </td>
         <td>{{ salario | currency:'EUR':true:'.2-2' }}</td>
       </tr>
-      <!-- <tr>
+      <tr>
         <th>{{ valorPromesa }}</th>
         <td>async</td>
         <td>{{ valorPromesa | async }}</td>
-      </tr> -->
+      </tr>
       <tr>
         <th>{{ date }}</th>
         <td>date</td>
@@ -80,6 +80,27 @@
         <td>date:'MMMM - dd'</td>
         <td>{{ date | date:'MMMM - dd' }}</td>
       </tr>
+      <tr>
+        <th>{{ nombreCapitalizable }}</th>
+        <td>capitalizable</td>
+        <td>{{ nombreCapitalizable | capitalizable }}</td>
+      </tr>
+      <tr>
+        <th>{{ nombreCapitalizable }}</th>
+        <td>capitalizable:false</td>
+        <td>{{ nombreCapitalizable | capitalizable: false }}</td>
+      </tr>
+      <tr>
+        <th>{{ nombre }}</th>
+        <td>
+          contrasena:{{ activar }} <br>
+          <button type="button" class="btn btn-primary"
+            (click)="activar = !activar;">
+            {{ (activar) ? 'Desactivar' : 'Activar' }}
+          </button>
+        </td>
+        <td>{{ nombre | contrasena:activar }}</td>
+      </tr>
     </tbody>
   </table>
 
@@ -91,6 +112,9 @@
   <code>
     <pre>{{ heroe | json }}</pre>
   </code>
+  <br> <br> <br>
+  <h3>Youtube</h3>
+  <iframe width="100%" height="600" [src]="codigoYoutube | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <br><br><br><br>
